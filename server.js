@@ -7,11 +7,14 @@ require('dotenv').config();
 const app = express();
 
 // DB Connection Using Mongoose
-mongoose.connect(process.env.MONGO_URI).then(() => console.log("Database Connected"));
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("Database Connected"))
+  .catch(err => console.error('MongoDB Connection Error:', err));;
 
 // Middlewares
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method')); // For Enabling Put and Del Request On Frontend
+app.set('view engine', 'ejs');
 
 // Routes
 app.get('/', (req, res) => {
