@@ -20,4 +20,12 @@ router.get('/items/edit/:id', async (req, res) => {
   res.render('edit', { item });
 });
 
+// Update item
+router.put('/items/:id', async (req, res) => {
+  await Item.findByIdAndUpdate(req.params.id, { name: req.body.name });
+  res.redirect('/');
+});
+
+
+
 module.exports = router;
