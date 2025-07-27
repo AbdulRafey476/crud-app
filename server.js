@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const itemRoutes = require('./routes/itemRoutes');
 require('dotenv').config();
 
 const app = express();
@@ -17,9 +18,8 @@ app.use(methodOverride('_method')); // For Enabling Put and Del Request On Front
 app.set('view engine', 'ejs');
 
 // Routes
-app.get('/', (req, res) => {
-  res.send("hello world");
-})
+app.use('/', itemRoutes);
+
 
 const PORT = 8000;
 app.listen(PORT, () => {
