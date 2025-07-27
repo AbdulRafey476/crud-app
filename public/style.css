@@ -8,3 +8,16 @@
 body {
   padding: 20px;
 }
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 16px;
+}
+
