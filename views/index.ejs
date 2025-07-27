@@ -13,5 +13,14 @@
             <input type="text" name="name" placeholder="Enter item" required>
             <button type="submit">Add</button>
         </form>
+        <ul>
+            <% items.forEach(item=> { %>
+                <li>
+                    <span>
+                        <%= item.name %>
+                    </span>
+                </li>
+            <% }) %>
+        </ul>
     </div>
 </body>
