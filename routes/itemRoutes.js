@@ -14,4 +14,10 @@ router.post('/items', async (req, res) => {
   res.redirect('/');
 });
 
+// Show edit form
+router.get('/items/edit/:id', async (req, res) => {
+  const item = await Item.findById(req.params.id);
+  res.render('edit', { item });
+});
+
 module.exports = router;
