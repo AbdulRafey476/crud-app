@@ -54,3 +54,23 @@ li {
 li span {
   flex: 1;
 }
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.action-buttons a {
+  text-decoration: underline;
+}
+
+.action-buttons form button {
+  padding: 2px 6px;
+}
+
+/* Back link */
+a[href="/"] {
+  display: block;
+  margin-top: 12px;
+}
