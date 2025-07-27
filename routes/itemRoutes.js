@@ -8,4 +8,10 @@ router.get('/', async (req, res) => {
   res.render('index', { items });
 });
 
+// Create new item
+router.post('/items', async (req, res) => {
+  await Item.create({ name: req.body.name });
+  res.redirect('/');
+});
+
 module.exports = router;
