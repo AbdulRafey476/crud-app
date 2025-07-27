@@ -26,6 +26,10 @@ router.put('/items/:id', async (req, res) => {
   res.redirect('/');
 });
 
-
+// Delete item
+router.delete('/items/:id', async (req, res) => {
+  await Item.findByIdAndDelete(req.params.id);
+  res.redirect('/');
+});
 
 module.exports = router;
