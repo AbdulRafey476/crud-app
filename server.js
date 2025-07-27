@@ -13,6 +13,7 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.error('MongoDB Connection Error:', err));;
 
 // Middlewares
+app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method')); // For Enabling Put and Del Request On Frontend
 app.set('view engine', 'ejs');
