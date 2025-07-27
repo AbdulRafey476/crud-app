@@ -21,3 +21,19 @@ h1 {
   margin-bottom: 16px;
 }
 
+/* Form */
+form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+form input[type="text"] {
+  flex: 1;
+  padding: 4px;
+  border: 1px solid #000;
+}
+
+form button {
+  padding: 4px 8px;
+}
