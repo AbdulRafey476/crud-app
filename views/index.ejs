@@ -3,33 +3,15 @@
 
 <head>
     <title>Item List</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
     <div class="container">
         <h1>Items</h1>
-        <form>
+        <form action="/items" method="POST">
             <input type="text" name="name" placeholder="Enter item" required>
-            <button type="submit" disabled>Add</button>
+            <button type="submit">Add</button>
         </form>
-        <ul>
-            <li>
-                <span>Sample Item 1</span>
-                <div class="action-buttons">
-                    <a href="#" onclick="">Edit</a>
-                    <button onclick="">Delete</button>
-                </div>
-            </li>
-            <li>
-                <span>Sample Item 2</span>
-                <div class="action-buttons">
-                    <a href="#" onclick="">Edit</a>
-                    <button onclick="">Delete</button>
-                </div>
-            </li>
-        </ul>
     </div>
 </body>
-
-</html>
