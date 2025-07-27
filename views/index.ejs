@@ -19,6 +19,12 @@
                     <span>
                         <%= item.name %>
                     </span>
+                    <div class="action-buttons">
+                        <a href="/items/edit/<%= item._id %>">Edit</a>
+                        <form action="/items/<%= item._id %>?_method=DELETE" method="POST">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </div>
                 </li>
             <% }) %>
         </ul>
